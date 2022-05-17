@@ -1,0 +1,7 @@
+D:\Study_NAU\2 Course\2 семестр\АтаППЗ\LabWork_2\bin\Debug\LabWork_2.exe.config
+D:\Study_NAU\2 Course\2 семестр\АтаППЗ\LabWork_2\bin\Debug\LabWork_2.exe
+D:\Study_NAU\2 Course\2 семестр\АтаППЗ\LabWork_2\bin\Debug\LabWork_2.pdb
+D:\Study_NAU\2 Course\2 семестр\АтаППЗ\LabWork_2\obj\Debug\LabWork_2.csproj.AssemblyReference.cache
+D:\Study_NAU\2 Course\2 семестр\АтаППЗ\LabWork_2\obj\Debug\LabWork_2.csproj.CoreCompileInputs.cache
+D:\Study_NAU\2 Course\2 семестр\АтаППЗ\LabWork_2\obj\Debug\LabWork_2.exe
+D:\Study_NAU\2 Course\2 семестр\АтаППЗ\LabWork_2\obj\Debug\LabWork_2.pdb
