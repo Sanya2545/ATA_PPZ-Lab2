@@ -8,7 +8,7 @@ namespace LabWork_2.Disciplines
 {
     internal class English : Discipline
     {
-        public bool IsDone{ get; set; }
+        
         public English(string name = "", Teacher teacher = null)
         {
             Name = name;

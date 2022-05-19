@@ -10,6 +10,7 @@ namespace LabWork_2
     {
         public Teacher Teacher { get; set; }
         public string Name { get; set; }
+        public bool IsDone { get; set; }
         public Discipline(string name = "", Teacher teacher = null)
         {
             Name = name;
@@ -17,7 +18,8 @@ namespace LabWork_2
         }
         public void ModuleWork()
         {
-                Console.WriteLine("Doing module work for " + Name);
+            IsDone = true;
+            Console.WriteLine("Doing module work for " + Name);
         }
         public void Exam()
         {

@@ -41,6 +41,15 @@ namespace LabWork_2
             return false;
         }
         #region DoWorksMethods
+        public bool DoModuleWork(Discipline discipline)
+        {
+            if (discipline.IsDone == true)
+            {
+                discipline.ModuleWork();
+                return true;
+            }
+            return false;
+        }
         public void DoEnglish ()
         {
             for (int i = 0; i < Disciplines.Length; ++i)
@@ -48,10 +57,12 @@ namespace LabWork_2
                 if (Disciplines[i] is English english && DoesHaveSpeackers && DoesHaveComputer && (Course == 1 || Course == 2))
                 {
                     english.Practice();
-                    english.ModuleWork();
+                    DoModuleWork(english);
                     english.Test();
                     english.NerrativesOnGivenTopics();
+                    DoModuleWork(english);
                     english.Reading();
+                    DoModuleWork(english);
                     english.WritingTests();
                     english.Exam();
                 }
@@ -67,8 +78,8 @@ namespace LabWork_2
                     {
                         architecture.Lecture();
                         architecture.LabWork();
-                        architecture.ModuleWork();
                         architecture.CourseWork();
+                        DoModuleWork(architecture);
                         architecture.Exam();
                     }
 
@@ -84,8 +95,8 @@ namespace LabWork_2
                     oop.Lecture();
                     oop.Test();
                     oop.LabWork();
-                    oop.ModuleWork();
                     oop.CourseWork();
+                    DoModuleWork(oop);
                     oop.Exam();
                 }
             }
