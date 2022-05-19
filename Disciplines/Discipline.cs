@@ -8,10 +8,12 @@ namespace LabWork_2
 {
     public class Discipline : IDiscipline
     {
-        protected string Name { get; set; }
-        public Discipline(string name = "")
+        public Teacher Teacher { get; set; }
+        public string Name { get; set; }
+        public Discipline(string name = "", Teacher teacher = null)
         {
             Name = name;
+            Teacher = teacher;
         }
         public void ModuleWork()
         {

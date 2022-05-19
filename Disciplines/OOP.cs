@@ -8,26 +8,27 @@ namespace LabWork_2
 {
     public class OOP : Discipline
     {
-        public OOP(string name = "")
+        public OOP(string name = "", Teacher teacher = null)
         {
             Name = name;
+            Teacher = teacher;
         }
-        #region TypeOfWorks
+        #region Types Of Works
         public void Lecture()
         {
-            Console.WriteLine("Reading lecture for " + Name);
+            Console.WriteLine("Reading lecture for " + Name + "\n" + Teacher.GetFullName());
         }
         public void LabWork()
         {
-            Console.WriteLine("Doing lab work for " + Name);
+            Console.WriteLine("Doing lab work for " + Name + "\n" + Teacher.GetFullName());
         }
         public void CourseWork()
         {
-            Console.WriteLine("Doing course work for " + Name);
+            Console.WriteLine("Doing course work for " + Name + "\n" + Teacher.GetFullName());
         }
         public void Test()
         {
-            Console.WriteLine("Doing test for " + Name);
+            Console.WriteLine("Doing test for " + Name + "\n" + Teacher.GetFullName());
         }
         #endregion
 

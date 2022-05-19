@@ -8,22 +8,23 @@ namespace LabWork_2.Disciplines
 {
     class ArchitectureOfSoftware : Discipline
     {
-        public ArchitectureOfSoftware(string name = "")
+        public ArchitectureOfSoftware(string name = "", Teacher teacher = null)
         {
             Name = name;
+            Teacher = teacher;
         }
-        #region TypeOfWorks
+        #region Types Of Works
         public void Lecture()
         {
-            Console.WriteLine("Reading lecture for " + Name);
+            Console.WriteLine("Reading lecture for " + Name + "\n" + Teacher.GetFullName());
         }
         public void LabWork()
         {
-            Console.WriteLine("Doing lab work for " + Name);
+            Console.WriteLine("Doing lab work for " + Name + "\n" + Teacher.GetFullName());
         }
         public void CourseWork()
         {
-            Console.WriteLine("Doing course work for " + Name);
+            Console.WriteLine("Doing course work for " + Name + "\n" + Teacher.GetFullName());
         }
         #endregion
 

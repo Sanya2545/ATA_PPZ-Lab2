@@ -24,6 +24,22 @@ namespace LabWork_2
             Disciplines = disciplines;
             Course = course;
         }
+        public bool CheckSameTeacher(int index)
+        { 
+            for(int i = 0; i < Disciplines.Length; ++i)
+            {
+                if(i == index)
+                {
+                    continue;
+                }
+                if(Disciplines[i].Teacher == Disciplines[index].Teacher)
+                {
+                    Console.WriteLine("This disciplines have the same teacher with discipline : " + Disciplines[i].Name);
+                    return true;
+                }
+            }
+            return false;
+        }
         #region DoWorksMethods
         public void DoEnglish ()
         {
@@ -45,13 +61,17 @@ namespace LabWork_2
         {
             for (int i = 0; i < Disciplines.Length; ++i)
             {
-                if (Disciplines[i] is ArchitectureOfSoftware architecture && DoesHaveComputer && Course == 2)
+                if(CheckSameTeacher(i))
                 {
-                    architecture.Lecture();
-                    architecture.LabWork();
-                    architecture.ModuleWork();
-                    architecture.CourseWork();
-                    architecture.Exam();
+                    if (Disciplines[i] is ArchitectureOfSoftware architecture && DoesHaveComputer && Course == 2)
+                    {
+                        architecture.Lecture();
+                        architecture.LabWork();
+                        architecture.ModuleWork();
+                        architecture.CourseWork();
+                        architecture.Exam();
+                    }
+
                 }
             }
         }
@@ -67,7 +87,6 @@ namespace LabWork_2
                     oop.ModuleWork();
                     oop.CourseWork();
                     oop.Exam();
-
                 }
             }
         }

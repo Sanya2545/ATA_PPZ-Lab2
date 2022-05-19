@@ -19,6 +19,9 @@ namespace LabWork_2
             Groups = groups;
             Discipline = discipline;
         }
-        
+        public string GetFullName()
+        {
+            return "Teacher : " + FirstName + " " + SurName + " " + LastName;
+        }
     }
 }
