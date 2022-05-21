@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace LabWork_2
 {
-    class SubGroup
-    {
-        public string Name { get; set; }
-        public Student[] Students;
+    class SubGroup : Group
+    { 
         public SubGroup(string name = "", Student[] students = null)
         {
             if(students.Length < 10)
